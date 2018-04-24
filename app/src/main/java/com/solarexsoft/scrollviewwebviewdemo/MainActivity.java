@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
         webSettings.setLoadWithOverviewMode(true);
         webSettings.setBlockNetworkImage(false);
-        webView.loadUrl("https://main.icarbonx.com/mallMicro/2000126");
+//        webView.loadUrl("https://main.icarbonx.com/mallMicro/2000126");
+        webView.loadUrl("http://www.baidu.com");
     }
 }
