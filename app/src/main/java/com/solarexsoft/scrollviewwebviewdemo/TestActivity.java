@@ -32,10 +32,7 @@ public class TestActivity extends AppCompatActivity {
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
-//                String js = "var appendDiv = document.createElement('div');document.body
-// .prepend(appendDiv);appendDiv.innerHTML='<div><img src=\"http://pub-1251962406.file.myqcloud
-// .com/skylight/resources/4c0475ed-0816-449b-8569-d7e02164307a.png\" width=\"100%%\"
-// height=\"auto\"></div>';";
+                String js = "var appendDiv = document.createElement('div');document.body.prepend(appendDiv);appendDiv.innerHTML='<div><img src=\"http://pub-1251962406.file.myqcloud .com/skylight/resources/4c0475ed-0816-449b-8569-d7e02164307a.png\" width=\"100%%\" height=\"auto\"></div>';";
 //                String js = "var appendDiv = document.createElement('div');document.body
 // .innerHTML='<div><img src=\"http://pub-1251962406.file.myqcloud
 // .com/skylight/resources/4c0475ed-0816-449b-8569-d7e02164307a.png\" width=\"100px\"
@@ -44,7 +41,8 @@ public class TestActivity extends AppCompatActivity {
 // .innerHTML='<div style=\"width:100px; height:100px; background-color:#666;
 // z-index:1\"></div>'; document.body.prepend(appenddiv);";
 //                String js = "document.body.innerHTML= '<div><img src=\"http://pub-1251962406.file.myqcloud.com/skylight/resources/4c0475ed-0816-449b-8569-d7e02164307a.png\"></div>'";
-                String js = "document.body.innerHTML = '<img src=\"https://icxpic-10023060.file.myqcloud.com/items/7df0382404a74132961ef82f3acbf5ea.jpeg\">'";
+//                String js = "document.body.innerHTML = '<img src=\"https://icxpic-10023060.file.myqcloud.com/items/7df0382404a74132961ef82f3acbf5ea.jpeg\">'";
+//                String js = "var appenddiv = document.createElement('div'); console.log('1');appenddiv.innerHTML='<img src=\"https://icxpic-10023060.file.myqcloud.com/items/7df0382404a74132961ef82f3acbf5ea.jpeg\">';console.log('2');document.body.prepend(appenddiv);console.log('3');";
                 view.loadUrl("javascript: " + js);
                 iv.animate().alpha(0).setStartDelay(100).setDuration(200).start();
             }
@@ -58,8 +56,9 @@ public class TestActivity extends AppCompatActivity {
         webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
         webSettings.setLoadWithOverviewMode(true);
         webSettings.setBlockNetworkImage(false);
+        webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
 //        webView.loadUrl("https://main.icarbonx.com/mallMicro/2000126");
 //        webView.loadUrl("http://www.baidu.com");
-        webView.loadUrl("http://www.qq.com");
+        webView.loadUrl("http://www.baidu.com");
     }
 }
