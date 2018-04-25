@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ScrollViewWebViewDemo</string>
+    <string name="inject_js">javascript:(function testssssss(){ var appendDiv = document.createElement("div");var body = document.getElementsByTagName("body")[0];if(body.firstChild == null||body.firstChild == 'undefine'){body.appendChild(appendDiv);}else{body.insertBefore(appendDiv,body.firstChild);}appendDiv.innerHTML="<div><img src='https://www.baidu.com/img/bd_logo1.png' width='100%' height='auto'/></div>";})();</string>
 </resources>
